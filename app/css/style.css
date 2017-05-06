@@ -1,13 +1,16 @@
-body {
-  color: #220000;
-  background-color: green; }
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  nav ul li {
-    display: inline-block; }
-    nav ul li a {
-      color: red;
-      font-size: 22px; }
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center; }
+  #header article {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto; }
+    #header article div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0; }
+      #header article div p {
+        margin: 0; }

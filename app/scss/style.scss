@@ -1,27 +1,23 @@
 @import "zmienne";
 
-@mixin menu_nawigacyjne {
-    color: red;
-    font-size: 22px;
-}
-
-body {
-    color: $base_color;
-    background-color: $bg_color;
-}
-
-nav {
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        
-        li {
-            display: inline-block;
-            
-            a{
-                @include menu_nawigacyjne;
+#header {
+    width: $full_width;
+    display: flex;
+    align-items: center;
+    
+    article {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: auto;
+        div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin:0;
+            p{
+                margin: 0;
             }
         }
     }
-}
+}  
