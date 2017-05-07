@@ -1,12 +1,28 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-size: 15px; }
+
 #header {
   width: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  z-index: 2; }
   #header article {
     display: flex;
     align-items: center;
     flex-direction: row;
     margin: auto; }
+    #header article i {
+      color: #ecd407;
+      font-size: 30px; }
+    #header article p {
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold; }
     #header article div {
       display: flex;
       align-items: center;
@@ -14,3 +30,82 @@
       margin: 0; }
       #header article div p {
         margin: 0; }
+      #header article div i {
+        color: #fff;
+        font-size: 30px;
+        margin-right: 10px; }
+      #header article div .text_sm {
+        color: #fff;
+        font-size: 10px; }
+      #header article div .text_md {
+        color: #fff;
+        font-size: 15px; }
+
+#main {
+  width: 100%;
+  height: 900px;
+  background-image: url("../img/background.png");
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  #main #form_main_container {
+    position: absolute;
+    width: 23%;
+    left: 60%;
+    top: 30%; }
+    #main #form_main_container .form_main_header_wrapper span {
+      color: #ecd407; }
+    #main #form_main_container .form_wrapper {
+      background-color: #001d8a;
+      padding: 10px; }
+      #main #form_main_container .form_wrapper form {
+        width: 100%; }
+        #main #form_main_container .form_wrapper form input, #main #form_main_container .form_wrapper form textarea {
+          width: 320px;
+          border: none;
+          padding: 5px;
+          margin: 5px; }
+        #main #form_main_container .form_wrapper form button {
+          padding: 5px;
+          margin: 5px; }
+
+#contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #292929;
+  margin: 0;
+  padding: 30px 15px 15px 15px;
+  height: 20%; }
+  #contact article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto; }
+    #contact article .icon_wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      text-align: center;
+      height: 50px;
+      width: 50px;
+      background-color: #ecd407; }
+      #contact article .icon_wrapper a {
+        margin: auto;
+        color: black;
+        font-size: 30px; }
+    #contact article div p {
+      margin: 0; }
+
+#stopka {
+  background-color: #292929;
+  text-align: center;
+  margin: 0;
+  padding: 15px 15px 30px 15px;
+  height: 5%; }
+  #stopka p {
+    padding: 0 60px;
+    color: #fff;
+    font-size: 10px; }

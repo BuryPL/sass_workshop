@@ -1,23 +1,151 @@
 @import "zmienne";
 
-#header {
-    width: $full_width;
+@mixin flexbox($direction) {
     display: flex;
     align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin margines($margin) {
+    margin: $margin;
+}
+
+@mixin vertical_center {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin font_styles($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
+@mixin background_image ($url, $position, $size) {
+    background-image: $url;
+    background-position: $position;
+    background-size: $size;
+}
+ 
+
+body {
+    font-family: $base_font_family;
+    @include font_styles($color_white, $font_size_middle);
+}
+
+#header {
+    width: $full_width;
+    @include flexbox(row);
+    background-color: $color_seethrough;
+    position: absolute;
+    z-index: 2;
     
     article {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        margin: auto;
-        div{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            margin:0;
-            p{
-                margin: 0;
+        @include flexbox(row);
+        @include margines(auto);
+        
+        i {@include font_styles($base_color_yellow, $font_size_xxl);}
+        p {
+            @include font_styles($color_white, $font_size_xxl);
+            font-weight: bold;
+        }
+        
+        div {
+            @include flexbox(column);
+            @include margines(0);
+            
+            p {@include margines(0);}
+            
+            i {
+                @include font_styles($color_white, $font_size_xxl);
+                margin-right: 10px;
+            }
+            
+            .text_sm {@include font_styles($color_white, $font_size_small);}
+            
+            .text_md {@include font_styles($color_white, $font_size_middle);}
+        }
+    }
+}
+
+#main {
+    width: $full_width;
+    height: 900px;
+    @include background_image(url("../img/background.png"),center,cover);
+    position: relative;
+    
+    #form_main_container {
+        position: absolute;
+        width: 23%;
+        left: 60%;
+        top: 30%;
+        
+        .form_main_header_wrapper {span{color: $base_color_yellow;}}
+        
+        .form_wrapper {
+            background-color: $base_color_blue;
+            padding: 10px;
+            
+            form {
+                width: 100%;
+                
+                input, textarea {
+                width: 320px;
+                border: none;
+                padding: 5px;
+                margin: 5px;
+                }
+                
+                button {
+                    padding: 5px;
+                    margin: 5px;
+                }
             }
         }
     }
-}  
+    
+}
+ 
+#contact {
+    width: $full_width;
+    @include flexbox(row);
+    background-color: $base_color_grey;
+    @include margines(0);
+    padding: 30px 15px 15px 15px;
+    height: 20%;
+        
+    article {
+        @include flexbox(column);
+        @include margines(auto);
+        
+        .icon_wrapper {
+            @include flexbox(column);
+            @include margines(0);
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            background-color: $base_color_yellow;
+            
+            a {
+                @include margines(auto);
+                @include font_styles(black, $font_size_xxl);
+            }
+        }
+        
+        div{
+            p{@include margines(0);}
+        }
+    }
+}
+
+#stopka {
+    background-color: $base_color_grey;
+    text-align: center;
+    @include margines(0);
+    padding: 15px 15px 30px 15px;
+    height: 5%;
+    
+    p {
+        padding: 0 60px;
+        @include font_styles($color_white,$font_size_small);
+    };
+}

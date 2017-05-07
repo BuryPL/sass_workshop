@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SASS</title>
-    
+
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -13,31 +13,46 @@
 <body>
     <header id="header">
         <article class="inside_article">
-            <i class="fa fa-university" aria-hidden="true"></i><p>Finanse</p>
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <p>Finanse</p>
         </article>
         <article class="inside_article">
             <div clss="phone_icon">
                 <i class="fa fa-phone ikonka" aria-hidden="true"></i>
             </div>
             <div>
-               <div>
-                   <p class="text_sm">Zadzwoń do nas</p>
-               </div>
-               <div>
-                   <p class="text_md">+22 00 000 123</p>
-               </div>
+                <div>
+                    <p class="text_sm">Zadzwoń do nas</p>
+                </div>
+                <div>
+                    <p class="text_md">+22 00 000 123</p>
+                </div>
             </div>
         </article>
     </header>
-    
+
     <section id="main">
-        
+        <article id="form_main_container">
+            <div class="form_main_header_wrapper">
+                <h2>Zostaw <span> sprawy finansowe </span>nam <span>skup się na swoim biznesie</span></h2>
+            </div>
+            <div class="form_wrapper">
+                <h3>Zostaw swoje dane, a my się z Tobą skontaktujemy</h3>
+                <form action="">
+                    <input type="text" placeholder="Imię i nazwisko"><br>
+                    <input type="email" placeholder="Email"><br>
+                    <input type="number" placeholder="Telefon"><br>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Wiadomość"></textarea><br>
+                    <button type="submit">Wyślij</button>
+                </form>
+            </div>
+        </article>
     </section>
-    
+
     <section id="contact">
         <article class="inside_article">
             <div class="icon_wrapper">
-                <i class="fa fa-phone ikonka" aria-hidden="true"></i>
+                <a href=""><i class="fa fa-phone ikonka" aria-hidden="true"></i></a>
             </div>
             <div class="phone_number">
                 <p class="text_md">+22 00 000 123</p>
@@ -45,18 +60,19 @@
         </article>
         <article class="inside_article">
             <div class="icon_wrapper">
-                <i class="fa fa-envelope ikonka" aria-hidden="true"></i>
+                <a href=""><i class="fa fa-envelope ikonka" aria-hidden="true"></i></a>
             </div>
             <div class="email">
                 <p class="text_md">kursy@akademia108.pl</p>
             </div>
         </article>
     </section>
-    
+
+
     <footer id="stopka">
         <p class="text_sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi fugiat, pariatur placeat. Alias nisi obcaecati quos non aperiam at sit molestiae neque ipsum nihil, atque hic? Iure saepe laborum corrupti quos, explicabo odit ipsum, accusantium magni quibusdam adipisci excepturi minima commodi cum harum quod. Aut, eius eum ratione vel dolores?</p>
     </footer>
-    
+
     <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/main.js"></script>
 </body>
